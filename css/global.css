@@ -1,12 +1,10 @@
 html {
-  -moz-box-sizing: border-box;
-       box-sizing: border-box;
+  box-sizing: border-box;
 }
 *,
 *:before,
 *:after {
-  -moz-box-sizing: inherit;
-       box-sizing: inherit;
+  box-sizing: inherit;
 }
 body {
   background: #f1f1f;
@@ -39,8 +37,7 @@ header {
   margin: 0;
   padding: 80px 0;
   text-align: center;
-  -webkit-transition: 1s;
-          transition: 1s;
+  transition: 1s;
 }
 header h1 {
   margin: 0 0 20px 0;
@@ -73,8 +70,7 @@ header h1 {
 .text-size span {
   margin-left: -10px;
   opacity: .3;
-  -webkit-transition: .5s;
-          transition: .5s;
+  transition: .5s;
 }
 .text-size span:last-child {
   font-size: 1.8em;
@@ -101,8 +97,7 @@ header h1 {
   position: absolute;
   right: -20px;
   top: -10px;
-  -webkit-transition: .5s;
-          transition: .5s;
+  transition: .5s;
 }
 #contrast-meter.pass {
   background: #56a8a0;
@@ -129,8 +124,7 @@ header h1 {
   border-radius: 5px;
   height: 6px;
   width: 0;
-  -webkit-transition: .4s;
-          transition: .4s;
+  transition: .4s;
   opacity: 1;
 }
 /**
@@ -166,8 +160,7 @@ header h1 {
 #compliance div {
   height: 0;
   overflow: hidden;
-  -webkit-transition: 1s;
-          transition: 1s;
+  transition: 1s;
 }
 #compliance div.active {
   height: 55px;
@@ -215,10 +208,8 @@ header h1 {
   width: 140%;
   padding: 4px 9px;
   z-index: 998;
-  -webkit-transition: .1s;
-          transition: .1s;
-  -webkit-animation: move .1s ease;
-          animation: move .1s ease;
+  transition: .1s;
+  animation: move .1s ease;
 }
 .error-alert:before {
   background: #ff0000;
@@ -229,21 +220,12 @@ header h1 {
   position: absolute;
   left: 10px;
   top: -4px;
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
   z-index: -1;
-}
-@-webkit-keyframes move {
-  0% {
-    -webkit-transform: translate(0px, 30px);
-            transform: translate(0px, 30px);
-  }
 }
 @keyframes move {
   0% {
-    -webkit-transform: translate(0px, 30px);
-            transform: translate(0px, 30px);
+    transform: translate(0px, 30px);
   }
 }
 @media all and (max-width: 320px) {
@@ -304,8 +286,7 @@ input[type=text] {
   padding: 5px 5px 5px 15px;
   width: 75px;
   outline: none;
-  -webkit-transition: all 0.3s ease-in-out;
-          transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 input[type=text]:focus {
   color: #027d71;
@@ -372,8 +353,7 @@ input[type=text].error {
   padding: 5px 15px;
   margin-left: 10px;
   position: relative;
-  -webkit-transition: 0.2s ease-in-out;
-          transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
   -webkit-appearance: none;
   -moz-appearance: none;
 }
@@ -432,6 +412,11 @@ footer {
   line-height: 1.2rem;
   padding: 30px 20px;
 }
+footer p:last-of-type {
+  margin-top: 40px;
+  font-style: italic;
+  text-align: center;
+}
 @media all and (max-width: 320px) {
   footer.container {
     padding: 15px 20px;
@@ -482,8 +467,7 @@ footer {
   left: 50%;
   pointer-events: none;
   -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-      transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 .tooltip:hover .tooltip-item::after {
   pointer-events: auto;
@@ -513,8 +497,7 @@ footer {
 }
 .tooltip-effect-2 .tooltip-content {
   -webkit-transform-origin: 50% calc(110%);
-  -ms-transform-origin: 50% calc(110%);
-      transform-origin: 50% calc(110%);
+  transform-origin: 50% calc(110%);
   -webkit-transform: perspective(1000px) rotate3d(1, 0, 0, 45deg);
   transform: perspective(1000px) rotate3d(1, 0, 0, 45deg);
   -webkit-transition: opacity 0.2s, -webkit-transform 0.2s;
@@ -528,8 +511,7 @@ footer {
 }
 .tooltip-effect-4 .tooltip-content {
   -webkit-transform-origin: 50% 100%;
-  -ms-transform-origin: 50% 100%;
-      transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
   -webkit-transform: scale3d(0.7, 0.3, 1);
   transform: scale3d(0.7, 0.3, 1);
   -webkit-transition: opacity 0.2s, -webkit-transform 0.2s;
@@ -539,8 +521,7 @@ footer {
   width: 180px;
   margin-left: -90px;
   -webkit-transform-origin: 50% calc(106%);
-  -ms-transform-origin: 50% calc(106%);
-      transform-origin: 50% calc(106%);
+  transform-origin: 50% calc(106%);
   -webkit-transform: rotate3d(0, 0, 1, 15deg);
   transform: rotate3d(0, 0, 1, 15deg);
   -webkit-transition: opacity 0.2s, -webkit-transform 0.2s;
@@ -573,4 +554,3 @@ footer {
   border-width: 10px;
   margin-left: -10px;
 }
-/*# sourceMappingURL=global.css.map */
