@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Color Contrast</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	
+	<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	
+	<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic" rel="stylesheet">
+	<link href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css" rel="stylesheet">
+	<link href="css/normalize-min.css" rel="stylesheet">
+	<link href="css/global.css" rel="stylesheet">
+	
+</head>
+
+<body>
+	
+	<header id="results">
+		
+		<h1>Contrast Validator</h1>
+		
+		<div class="contrast-ratio-results cf">
+			<div id="contrast-ratio-text">
+				<span>Contrast Ratio</span>
+				<span id="main-ratio">0.0</span>
+				<span id="base-ratio">1</span>
+			</div>
+			<div class="text-size">
+				<span id="text-size-small">T</span>
+				<span id="text-size-large">T</span>
+			</div>
+		</div>
+		
+		<div id="contrast-meter">
+			<div id="contrast-meter-value"></div>
+		</div>
+		
+		<div id="compliance">
+			<div id="level-aaa-compliant">
+				<strong>Level AAA Compliant</strong>
+				<span>Section 508 (1194.31 - Functional performance) and WCAG 2</span>
+			</div>
+			<div id="level4-compliant">
+				<strong>Level AA Compliant</strong>
+				<span>Section 508 (1194.31 - Functional performance) and WCAG 2</span>
+			</div>
+			<div id="level-aa-compliant">
+				<strong>Level AA Compliant</strong>
+				<span>Section 508 (1194.31 - Functional performance) and WCAG 2</span>
+			</div>
+			<div id="level-not-compliant">
+				<strong>Not Compliant</strong>
+				<span>Note: there are not any contrast requirements in WCAG 2 - Level A or Section 508 - Section 1194.22 Web Sites and Application. Thus, content may meet these requirements independent of the color palette used.</span>
+			</div> 
+		</div>
+		
+	</header>
+	
+	<main class="value-entry container cf">
+		<fieldset>
+			<span id="bg-color-alert" class="error-alert is-hidden">Whoa there sparky, you need 6 characters.</span>
+			<label for="background-color" class="hex">Background</label>
+			<input id="background-color" type="text" value="000000" maxlength="6">
+		</fieldset>
+		
+		<fieldset>
+			<span id="fg-color-alert" class="error-alert is-hidden">Whoa there sparky, you need 6 characters.</span>
+			<label for="foreground-color" class="hex">Foreground</label>
+			<input id="foreground-color" type="text" value="ffffff" maxlength="6">
+		</fieldset>
+		
+		<fieldset class="text-size-select">
+			<label for="font-size">Text Size:</label>
+			<div class="select-wrapper">
+				<select id="font-size">
+					<option value="1">Less than 18 points</option>
+					<option value="2">18 Points or larger or 14 points and bold</option>
+				</select>
+			</div>
+		</fieldset>
+		
+		<div class="do-things">
+			<button id="run-contrastor">Check</button>
+			<span id="reset" class="ion-refresh">Reset</span>
+		</div>
+		
+	</main>
+	
+	<footer class="container">
+		<p>The compliance rate shown above is the highest compliance rate met. The WCAG 2.0 level AA and proposed Section 508 refresh compliance level is based on achieving a contrast ratio of 3:1 for text with a size of 18 points (14 points if bolded) or larger or 4.5:1 for text with a size less than 18 points.  The WCAG 2.0 level AAA compliance level is meet when a contrast ration of 7:1 is achieved for text less than 18 points and 4.5:1 for text 18 points (14 points if bolded) or larger.</p>
+		<p>The algorithm used in this tool and subsequent results are based on the luminosity algorithm recommended in the <a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html">WCAG 2.0 guidelines to test for contrast</a>.  This tool is for general assessment purposes only and not a guarantee of compliance.</p>
+	</footer>
+	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="js/min/prefixfree-min.js"></script>
+	<!-- <script src="js/min/app-min.js"></script> -->
+	<script src="js/app.js"></script>
+	
+</body>
+</html>
